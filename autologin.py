@@ -1,11 +1,33 @@
 from selenium import webdriver
-from time import sleep
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.wait import WebDriverWait
+
+
+def user_input_cli():
+    username = input(print("Enter your Instagram Username : "))
+    password = input("Enter your Password : ")
+
+
+class InstaBot():
+
+    username = ''
+    password = ''
+
+    def login(self):
+        driver = webdriver.Chrome()
+
+        driver.get('http://www.instagram.com/')
 
 
 
-class InstaBot:
-    def __init__(self, username, password):
-        self.driver = webdriver.Chrome(executable_path='/Users/sanchitjain/Downloads/chromedriver')
-        self.driver.get("https://www.instagram.com/?hl=en")
-        sleep(10)
-        self.driver.find_element_by_xpath("").click()
+
+
+
+
+
+i1 = InstaBot()
+
+user_input_cli()
+i1.login()
+
