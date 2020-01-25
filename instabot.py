@@ -1,6 +1,5 @@
 from selenium import webdriver
 from time import sleep
-from secrets import pw
 
 class InstaBot:
     def __init__(self, username, password):
@@ -22,7 +21,8 @@ class InstaBot:
     #     self.driver.find_element_by_xpath("//a[contains(@href, '/Following')]").click()
 
 
+username = input()
+password = input()
 
-
-bot = InstaBot("_sanchitj_", "sancharc")
+InstaBot(username, password)
 # bot.unfollowers()
