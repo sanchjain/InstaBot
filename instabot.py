@@ -2,12 +2,11 @@ from selenium import webdriver
 from time import sleep
 
 class InstaBot:
+
     def __init__(self, username, password):
         self.username = username
-        self.driver = webdriver.Chrome(executable_path='/Users/sanchitjain/Downloads/chromedriver')
-        self.driver.get("https://www.instagram.com/?hl=en")
-        sleep(5)
-        self.driver.find_element_by_xpath("//a[contains(text(), 'Log in')]").click()
+        self.driver = webdriver.Chrome()
+        self.driver.get("https://www.instagram.com/accounts/login/?source=auth_switcher")
         sleep(5)
         self.driver.find_element_by_xpath("//input[@name = \'username\']").send_keys(username)
         self.driver.find_element_by_xpath("//input[@name = \'password\']").send_keys(password)
